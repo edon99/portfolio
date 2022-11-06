@@ -27,8 +27,8 @@
     }
 
 .navbar {
-  position: sticky ;
-  /* fixed or remove */
+  
+ /* position fixed or stikcy */
   z-index: 1;
   top: 0;
   left: 0;

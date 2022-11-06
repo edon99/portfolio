@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: #212121;
-  
+  margin: 0;
 }
 @media (max-width: 60em) {
   body {

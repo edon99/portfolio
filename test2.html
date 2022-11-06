@@ -1,117 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - Onclick image popup javascript and jQuery</title>
-  <link rel="stylesheet" href="styles/test.css">
-  <link rel="stylesheet" href="styles/navStyle.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<header>
-      
-  <div class="navbar">
-    <img class="logo" src="images/logo.png" alt="logo">
-    <div class="tings">
-       <a href="home.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact me</a> 
-    </div>
-    
-</div>
-</header>
-<div class="row">
-  <div class="column">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar 1</title>
    
-        <img class="small-image" src="images/a.jpg">
-   
-    
-    
-        <img class="small-image" src="images/f.jpg">
-    
-            
-                
-
-    
-        <img class="small-image" src="images/asni.jpg">
-    
-   
-   
-        <img class="small-image" src="images/g.jpg">
-   
-    
-  </div>
-  <div class="column">
-    
-    <img class="small-image" src="images/c.jpg">
-
-
-     
-    <img class="small-image" src="images/mon.jpg">
-
-      
-    
-     
-    <img class="small-image" src="images/i.jpg">
-
-
-   
-        <img class="small-image" src="images/h.jpg">
-    
-    
-    
-        <img class="small-image" src="images/giz.jpg">
-    
-    
-    
-  </div>
-  <div class="column">
-    
-        <img class="small-image" src="images/b.jpg">
-    
-    
-
-    <img class="small-image" src="images/d.jpg">
-
-
-
-<img class="small-image" src="images/e.jpg">
-
-
-
-<img class="small-image" src="images/mahrez edit.jpg">
-
-
-     
-    <img class="small-image" src="images/j.jpg">
-
-
-
-<img class="small-image" src="images/k.jpg">
-
-
-  
-  
-</div>
-
-
-
-
-<!-- // popup modal -->
-
-<div id="show_image_popup">
-  <div class="close-btn-area">
-
-    <button id="close-btn">X</button> 
-  </div>
-  <div id="image-show-area">
-    <img id="large-image" src="" alt="">
-  </div>
-</div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="js/test.js"></script>
-
-</body>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link href="styles/test2.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <nav class="navbar-menu">
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact me</a>
+      </nav>
+    </nav>
+    <script type="text/javascript" src="js/test.js"></script>
+  </body>
 </html>

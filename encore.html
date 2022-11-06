@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/navStyle.css">
-    <link rel="stylesheet" href="styles/test2.css">
+    <link rel="stylesheet" href="styles/encoreStyle.css">
     <link rel="icon" href="images/logo.png">
     <title>Encore</title>
-</head>
-<body>
-    <header>
-      
-        <div class="navbar">
-          <img class="logo" src="images/logo.png" alt="logo">
-          <div class="tings">
-             <a href="home.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact me</a> 
-          </div>
-          
-      </div>
-    </header>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+        <span class="material-icons">menu</span>
+      </button>
+      <img class="logo" src="images/logo.png" alt="logo">
+      <nav class="navbar-menu">
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact me</a>
+      </nav>
+    </nav>
+    <script type="text/javascript" src="js/test.js"></script>
     <!-- <div class="container">
 
         <div class="gallery-container w-3 h-2">
@@ -119,83 +123,83 @@
 
      <div class="row">
       <div class="column">
-        <a href="#img1">
+        
             <img class="thumb" src="images/a.jpg">
-        </a>
+        
         <div class="lightbox" id="img1">         
                 <a href="#_" class="btn-close">X</a>
                 <img src="images/a.jpg">           
         </div>
-        <a href="#img2">
+        
             <img class="thumb" src="images/f.jpg">
-        </a>
+        
         <div class="lightbox" id="img2">         
             <a href="#_" class="btn-close">X</a>
             <img src="images/f.jpg">           
     </div>
-        <a href="#img3">
+        
             <img class="thumb" src="images/asni.jpg">
-        </a>
+        
         <div class="lightbox" id="img3">         
             <a href="#_" class="btn-close">X</a>
             <img src="images/asni.jpg">           
     </div>
-    <a href="#img98">
+    
       <img class="thumb" src="images/goom giveaway.jpg">
-  </a>
+  
     <div class="lightbox" id="img98">         
       <a href="#_" class="btn-close">X</a>
       <img src="images/goom giveaway.jpg">           
 </div>
     
-        <a href="#img4">
+        
             <img class="thumb" src="images/g.jpg">
-        </a>
+        
         <div class="lightbox" id="img4">         
             <a href="#_" class="btn-close">X</a>
             <img src="images/g.jpg">           
     </div>
       </div>
       <div class="column">
-         <a href="#img5">
+         
         <img class="thumb" src="images/c.jpg">
-    </a>
+   
     <div class="lightbox" id="img5">         
         <a href="#_" class="btn-close">X</a>
         <img src="images/c.jpg">           
 </div>
-         <a href="#img6">
+         
         <img class="thumb" src="images/mon.jpg">
-    </a>
+    
     <div class="lightbox" id="img6">         
         <a href="#_" class="btn-close">X</a>
         <img src="images/mon.jpg">           
 </div>
-         <a href="#img7">
+         
         <img class="thumb" src="images/i.jpg">
-    </a>
+    
     <div class="lightbox" id="img7">         
         <a href="#_" class="btn-close">X</a>
         <img src="images/i.jpg">           
 </div>
-<a href="#img99">
+
   <img class="thumb" src="images/scc ramadan.jpg">
-</a>
+
 <div class="lightbox" id="img99">         
   <a href="#_" class="btn-close">X</a>
   <img src="images/scc ramadan.jpg">           
 </div>
-        <a href="#img8">
+        
             <img class="thumb" src="images/h.jpg">
-        </a>
+        
         <div class="lightbox" id="img8">         
             <a href="#_" class="btn-close">X</a>
             <img src="images/h.jpg">           
     </div>
     
-        <a href="#img9">
+        
             <img class="thumb" src="images/giz.jpg">
-        </a>
+        
         <div class="lightbox" id="img9">         
             <a href="#_" class="btn-close">X</a>
             <img src="images/giz.jpg">           
@@ -203,51 +207,51 @@
         
       </div>
       <div class="column">
-        <a href="#img10">
+       
             <img class="thumb" src="images/b.jpg">
-        </a>
+        
         <div class="lightbox" id="img10">         
             <a href="#_" class="btn-close">X</a>
             <img src="images/b.jpg">           
     </div>
-    <a href="#img11">
+    
         <img class="thumb" src="images/d.jpg">
-    </a>
+    
     <div class="lightbox" id="img11">         
         <a href="#_" class="btn-close">X</a>
         <img src="images/d.jpg">           
 </div>
-<a href="#img12">
+
     <img class="thumb" src="images/e.jpg">
-</a>
+
 <div class="lightbox" id="img12">         
     <a href="#_" class="btn-close">X</a>
     <img src="images/e.jpg">           
 </div>
-<a href="#img13">
+
     <img class="thumb" src="images/mahrez edit.jpg">
-</a>
+
 <div class="lightbox" id="img13">         
     <a href="#_" class="btn-close">X</a>
     <img src="images/mahrez edit.jpg">           
 </div>
-<a href="#img97">
+
   <img class="thumb" src="images/abeid.jpg">
-</a>
+
 <div class="lightbox" id="img97">         
   <a href="#_" class="btn-close">X</a>
   <img src="images/abeid.jpg">           
 </div>
-         <a href="#img14">
+         
         <img class="thumb" src="images/j.jpg">
-    </a>
+    
     <div class="lightbox" id="img14">         
         <a href="#_" class="btn-close">X</a>
         <img src="images/j.jpg">           
 </div>
-<a href="#img15">
+
     <img class="thumb" src="images/k.jpg">
-</a>
+
 <div class="lightbox" id="img15">         
     <a href="#_" class="btn-close">X</a>
     <img src="images/k.jpg">           

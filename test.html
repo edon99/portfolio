@@ -1,117 +1,288 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>TEST</title>
-  <link rel="stylesheet" href="styles/test.css">
-  <link rel="stylesheet" href="styles/navStyle.css">
-
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/navStyle.css">
+    <link rel="stylesheet" href="styles/homeStyle.css">
+    <link rel="stylesheet" href="styles/test.css">
+    <link rel="stylesheet" href="styles/footerStyle.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+   
+    <link rel="icon" href="images/logo.png">
+    
+    
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <header>
-      
-  <div class="navbar">
-    <img class="logo" src="images/logo.png" alt="logo">
-    <div class="tings">
-       <a href="home.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact me</a> 
+    
+    <div class="navbar">
+        <img class="logo" src="images/logo.png" alt="logo">
+        <div class="tings">
+           <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact me</a> 
+        </div>
+        
     </div>
-    
-</div>
 </header>
-<div class="row">
-  <div class="column">
-   
-        <img class="small-image" src="images/a.jpg">
-   
-    
-    
-        <img class="small-image" src="images/f.jpg">
-    
-            
-                
+<main role="main">
 
+    <!-- Slider -->
+    <section class="velo-slides" data-velo-slider="on" data-velo-theme="light">
     
-        <img class="small-image" src="images/asni.jpg">
+  
+      <!-- Slide -->
+      <section class="velo-slide">
+        <!-- Pretitle Hint -->
+        <span class="velo-slider__hint"><span><span>wagwan u lot</span></span></span> <!-- Slide BG -->
+        <div class="velo-slide__bg">
+          <!-- Borders -->
+          <span class="border"><span></span></span> <!-- Img -->
     
-   
-   
-        <img class="small-image" src="images/g.jpg">
-   
-    
-  </div>
-  <div class="column">
-    
-    <img class="small-image" src="images/c.jpg">
-
-
-     
-    <img class="small-image" src="images/mon.jpg">
-
+          <div class="velo-slide__vid-wrap">
+            <video autoplay="" class="velo-slide__vid" loop="" poster="">
+              <source src="images/12.mp4" type="video/mp4">Error 404</video>
+          </div>
+        </div>
+        
       
-    
-     
-    <img class="small-image" src="images/i.jpg">
-
-
-   
-        <img class="small-image" src="images/h.jpg">
-    
-    
-    
-        <img class="small-image" src="images/giz.jpg">
-    
-    
-    
-  </div>
-  <div class="column">
-    
-        <img class="small-image" src="images/b.jpg">
-    
-    
-
-    <img class="small-image" src="images/d.jpg">
-
-
-
-<img class="small-image" src="images/e.jpg">
-
-
-
-<img class="small-image" src="images/mahrez edit.jpg">
-
-
-     
-    <img class="small-image" src="images/j.jpg">
-
-
-
-<img class="small-image" src="images/k.jpg">
-
-
+        <!-- Header -->
+        <header class="velo-slide__header">
+          <h3 class="velo-slide__title"><span class="oh"><span>The Name Is</span></span><span class="oh"><span>Foura Oussama</span></span></h3>
+          <p class="velo-slide__text"><span class="oh"><span>Hi! I'm a Graphic and Web Designer with 2+ years of freelancing experience. </span></span></p>
+          <span class="velo-slide__btn"><a class="btn-draw btn--white" href="about.html"><span class="btn-draw__text"><span>More About</span></span></a></span>
+        </header>
+      </section>
   
+      <!-- Slide -->
+      <section class="velo-slide">
+        <!-- Pretitle Hint -->
+        <span class="velo-slider__hint"><span><span>What's up Playas</span></span></span> 
+        <!-- Slide BG -->
+        <div class="velo-slide__bg">
+          <!-- Borders -->
+          <span class="border"><span></span></span> <!-- Img -->
+          <figure class="velo-slide__figure" style="background-image: url(images/oldgold.png)"></figure>
+        </div>
+      
+        <!-- Header -->
+        <header class="velo-slide__header">
+          <h3 class="velo-slide__title"><span class="oh"><span>Cool Websites,</span></span><span class="oh"><span>And cooler Graphics</span></span></h3>
+          <p class="velo-slide__text"><span class="oh"><span>idk</span></span></p>
+        </header>
+      </section>
+      
+      <!-- Slide - with Video -->
+      <section class="velo-slide">
+        <!-- Pretitle Hint -->
+        <span class="velo-slider__hint"><span><span>uwu this is kinda cool</span></span></span> 
+        <!-- Slide BG -->
+        <div class="velo-slide__bg">
+          <!-- Borders -->
+          <span class="border"><span></span></span> <!-- Img -->
+          <div class="velo-slide__bg">
+            <!-- Borders -->
+            <span class="border"><span></span></span> <!-- Img -->
+            <figure class="velo-slide__figure" style="background-image: url(https://source.unsplash.com/D8GFCYxyJj8/2000x1200)"></figure>
+          </div>
+        </div><!-- Header -->
+        <header class="velo-slide__header">
+          <h3 class="velo-slide__title"><span class="oh"><span>Featured </span></span><span class="oh"><span>Projects</span></span></h3>
+          <p class="velo-slide__text"><span class="oh"><span>Check out this selection of some of the projects i've worked on over the last few years.</span></span></p>
+          <span class="velo-slide__btn"><a class="btn-draw btn--white" href="projects.html"><span class="btn-draw__text"><span>View Projects</span></span></a></span>
+        </header>
+      </section>
+      
+     
+      <!-- Slides Nav -->
+      <nav class="velo-slides-nav">
+        <ul id="arrow" class="velo-slides-nav__list">
+          <li>
+            <a  class="js-velo-slides-prev velo-slides-nav__prev inactive" href="#0"><i class="icon-up-arrow"></i></a>
+          </li>
+          <li>
+            <a class="js-velo-slides-next velo-slides-nav__next" href="#0"><i class="icon-down-arrow"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    
+  </main>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.3.0/velocity.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.3.0/velocity.ui.js'></script>
   
-</div>
-
-
-
-
-<!-- // popup modal -->
-
-<div id="modal">
-  <div class="close-btn-area">
-
-    <button id="close-btn">X</button> 
+      <script src="js/index.js"></script>
+  <div>
+<div class="container3">
+  <div class="content-width">
+    <div class="slideshow">
+      <!-- Slideshow Items -->
+      <div class="slideshow-items">
+        <div class="item">
+          <div class="item-image-container">
+            <img class="item-image" src="images/a.jpg" style="width:600px ;height:760px ;" />
+          </div>
+          <!-- Staggered Header Elements -->
+          <div class="item-header">
+            <span class="vertical-part"><b>Edits</b></span>
+            
+          </div>
+          <!-- Staggered Description Elements -->
+          <div class="item-description">
+            <span class="vertical-part">
+              <b>I can edit your personal photos to make you look very cool ig.</b>
+            </span>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-container">
+            <img class="item-image" src="images/f.jpg"/>
+          </div>
+          <!-- Staggered Header Elements -->
+          <div class="item-header">
+            <span class="vertical-part"><b>Effects</b></span>
+           
+          </div>
+          <!-- Staggered Description Elements -->
+          <div class="item-description">
+            <span class="vertical-part">
+              <b>I can add effects and cool stuff and make u look even cooler ig.</b>
+            </span>
+            
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-container">
+            <img class="item-image" src="images/c.jpg"/>
+          </div>
+          <!-- Staggered Header Elements -->
+          <div class="item-header">
+            <span class="vertical-part"><b>Custom</b></span>
+            
+          </div>
+          <!-- Staggered Description Elements -->
+          <div class="item-description">
+            <span class="vertical-part">
+              <b>I can make custom edits of ur favourite stuff and make the look even more cooler ig. </b>
+            </span>
+           
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <ul>
+          <li class="control" data-index="0"></li>
+          <li class="control" data-index="1"></li>
+          <li class="control" data-index="2"></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div id="image-show-area">
-    <img id="large-image" src="" alt="">
-  </div>
 </div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script  src="js/test.js"></script>
+    
+    <!-- partial -->
+      <script  src="js/test.js"></script>
+     
+          <footer id="contact" class="footer">
+            <div class="footer__addr">
+              <h1 class="footer__logo">Here we go</h1>
+                  
+              
+              
+              <address>
+                25021 Constantine. Algeria<br>
+                    
+                <a class="footer__btn ffs" id="email" href="mailto:ofoura07@gmail.com">Email Me</a>
+                
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script><script  src="js/footer.js"></script>
+                
+              </address>
+            </div>
+            
+            <ul class="footer__nav">
+              <li class="nav__item">
+                <h2 class="nav__title">Links</h2>
+          
+                <ul class="nav__ul ">
+                  <li>
+                    <a href="home.html">Home</a>
+                  </li>
+          
+                  <li>
+                    <a href="projects.html">Projects</a>
+                  </li>
 
+                  <li>
+                    <a href="about.html">About</a>
+                  </li>
+                      
+                  <li>
+                    <a href="contact.html">Contact Me</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item ">
+                <h2 class="nav__title">Services</h2>
+                
+                <ul class="nav__ul">
+                  <li>
+                    <a href="graphicDesign.html">Graphic Design</a>
+                  </li>
+                  <li>
+                    <a href="web.html">Web Design</a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav__item">
+                <h2 class="nav__title">Contacts</h2>
+                
+                <ul class="nav__ul ">
+                 
+                  
+                  <li>
+                    <div class="twitter">
+                      <a href="https://twitter.com/Edon_Foura">Twitter</a>
+                    </div>
+                    
+                    
+                  </li>
+                  
+                  <li>
+                    <div class="instagram">
+                      <a href="https://www.instagram.com/edon_oussama/">Instagram</a>
+                    </div>
+                    
+                  </li>
+
+                  <li>
+                    <div class="linkdin">
+                      <a href="https://www.linkedin.com/in/oussama-foura-1b2140211/">LinkedIn</a>
+                    </div>
+                    
+                  </li>
+
+                
+                </ul>
+              </li>
+            </ul>
+            
+            
+            <div class="legal">
+              <p>&copy; 2022 Foura Oussama. All rights reserved.</p>
+              
+              <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> </span>
+              </div>
+            </div>
+
+          </footer>
 </body>
 </html>

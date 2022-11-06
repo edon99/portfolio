@@ -1,76 +1,153 @@
-body{
-  background: #212121;
+
+
+.container3 {
+  width: 100%;
+  height: 700px;
+  overflow: hidden; 
+  background: #272727;
+  font-family: 'Fira Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  font-size: 20px;
+  color: #bdbdd5;
+  
 }
 
-.row {
+.content-width {
+  width: 86%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 75%;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 90px 30px;
-  margin-top: 50px;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 10%;
-  max-width: 33%;
-  margin: 10px;
- 
-}
-
-.column img {
-  margin-top: 20px;
+.slideshow-items {
+  position: relative;
   width: 100%;
-  transition: 0.4s;
-  display: block;
-  object-fit: cover;
-}
-.column img:hover{
-  transform: scale(1.02);
-  display: block;
-  cursor: pointer;
-}
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 35%;
-    max-width: 50%;
-  }
+  height: 300px;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-#modal{
-  
-  width: 450px;
-  height: auto;
-  padding: 5px;
-  text-align: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  background: #212121;
-  transform: translate(-50%, -50%);
-  display: none;
-  
-}
-#modal img{
-  max-width: 90%;
-  height: auto;
-  margin-bottom: 20px;
-  
-}
-
-
-.close-btn-area{
+.item {
+  position: absolute;
   width: 100%;
+  height: auto;
+}
+
+.item-image-container {
+  position: relative;
+  width: 42%;
+}
+
+.item-image-container::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 101%;
+  height: 101%;
+  background: #272727;
+  opacity: 0;
+  z-index: 1;
+}
+
+.item-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  display: block;
+  /* transition: property name | duration | timing-function | delay  */
+  transition: opacity .3s ease-out .45s;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+.item.active .item-image {
+  opacity: .6;
+}
+
+/* .item.active .item-image-container::before {
+  opacity: .8;
+} */
+
+.item-description {
+  position: absolute;
+  top: 182px;
+  right: 0;
+  width: 50%;
+  padding-right: 4%;
+  line-height: 1.8;
+}
+
+/* Staggered Vertical Items ------------------------------------------------------*/
+.item-header {
+  position: absolute;
+  top: 150px;
+  left: -1.8%;
+  z-index: 100;
+}
+
+.item-header .vertical-part {
+  margin: 0 -4px;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: auto;
+  font-size: 7vw;
+  color: #fff;
+}
+
+.vertical-part {
+  margin-left: 120px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.vertical-part b {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.item-header .vertical-part b {
+  transition: .5s;
+}
+
+.item-description .vertical-part b {
+  transition: .21s;
+}
+
+.item.active .item-header .vertical-part b {
+  transform: translateY(0);
+}
+
+.item.active .item-description .vertical-part b {
+  transform: translateY(0);
+}
+
+/* Controls ----------------------------------------------------------------------*/
+.controls {
+  top: 150px;
+  position: relative;
   text-align: right;
-  margin-bottom: 5px;
-  
+  z-index: 1000;
 }
-.close-btn-area button{
+
+.controls ul {
+  list-style: none;
+}
+
+.controls ul li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  background:#bdbdd5;;
   cursor: pointer;
+}
+
+.controls ul li.active {
+  background:#6a6a77;;
 }

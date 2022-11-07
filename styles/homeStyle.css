@@ -240,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .velo-slides {
-  z-index: 8;
+  z-index: 1;
   position: relative;
   height: 100vh;
   background-color: #111;
@@ -679,7 +679,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .velo-slider__hint {
   z-index: 99;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   display: none;
@@ -716,6 +716,7 @@ h1, h2, h3, h4, h5, h6 {
           transform: translateY(0%);
   -webkit-transition: 0.4 ease;
   transition: 0.4 ease;
+  
 }
 
 .velo-slides-nav {

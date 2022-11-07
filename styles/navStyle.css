@@ -28,8 +28,8 @@
 
 .navbar {
   
- /* position fixed or stikcy */
-  z-index: 1;
+ position: sticky;
+  z-index: 10;
   top: 0;
   left: 0;
   display: flex;
@@ -114,7 +114,7 @@ body.open .navbar-overlay {
   display: flex;
   gap: 8px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start ;
   background: #000000;
   visibility: hidden;
   transition: translate 0.3s;

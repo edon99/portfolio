@@ -44,20 +44,28 @@ body {
   
   .form-control, 
   textarea {
-    max-width: 400px;
+    width: 400px;
+    padding: 12px;
+    margin-bottom: 10px;
     background-color: #000;
     color: #fff;
     letter-spacing: 1px;
     background-color: #212121;
+    background: transparent;
+    border:solid  #bbb 1px;
+    border-radius: 5px;
   }
   
   .send-button {
+    border: none;
     margin-top: 15px;
-    height: 34px;
+    height: 38px;
     width: 400px;
     overflow: hidden;
     transition: all .2s ease-in-out;
+    background-color: #2e424d;
     /* background-color: #2e424d; */
+    cursor: pointer;
   }
   
   .alt-send-button {
@@ -66,18 +74,23 @@ body {
     transition: all .2s ease-in-out;
     /* background-color: #2e424d; */
   }
+  .form-group i {
+    color: white;
+    margin-top: 10px;
+  }
   
   .send-text {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
     font: 700 12px 'Lato', sans-serif;
     letter-spacing: 2px;
+    color: white;
     /* background-color: #2e424d; */
   }
   
   .alt-send-button:hover {
     /* background-color: #2e424d; */
-    transform: translate3d(0px, -29px, 0px);
+    transform: translate3d(0px, -35px, 0px);
   }
   
   /* Begin Right Contact Page */

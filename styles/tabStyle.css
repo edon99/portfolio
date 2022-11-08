@@ -67,8 +67,22 @@
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
 }
 
+.item-video{
+  position: relative;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  display: block;
+  /* transition: property name | duration | timing-function | delay  */
+  transition: opacity .3s ease-out .45s;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+}
+
 .item.active .item-image {
   opacity: .6;
+}
+.item.active .item-video {
+  opacity: .35;
 }
 
 /* .item.active .item-image-container::before {

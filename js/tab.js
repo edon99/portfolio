@@ -4,7 +4,7 @@ controls = document.querySelectorAll('.control'),
 headerItems = document.querySelectorAll('.item-header'),
 descriptionItems = document.querySelectorAll('.item-description'),
 activeDelay = .76,
-interval = 3200;
+interval = 5000;
 
 let current = 0;
 

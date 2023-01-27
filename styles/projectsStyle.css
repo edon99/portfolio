@@ -9,7 +9,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 :root{
-    --left-bg-color: rgba(46, 66, 77, 0.9);
+    --left-bg-color: rgba(46, 66, 77, 0.6);
     --right-bg-color: rgba(46, 66, 77, 0.8);
     --left-btn-hover-color: rgba(91, 130, 145, 1);
     --right-btn-hover-color: rgba(46, 66, 77, 1);
@@ -81,7 +81,7 @@ h1{
 }
 .split.left{
     left:0;
-    background: url("./images/images.jpg")
+    background: url("../images/ve.jpeg")
     no-repeat center / cover;
 }
 .split.left:before{
@@ -93,7 +93,7 @@ background-color: var(--left-bg-color);
 }
 .split.right{
     right:0;
-    background: url("./images/test.png")
+    background: url("../images/test.png")
     no-repeat center / cover;
 }
 .split.right:before{

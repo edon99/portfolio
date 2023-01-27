@@ -1,153 +1,275 @@
+body{
+margin: 0;
+background: #212121; ;
 
-
-.container3 {
-  width: 100%;
-  height: 700px;
-  overflow: hidden; 
-  background: #272727;
-  font-family: 'Fira Mono', monospace;
-  -webkit-font-smoothing: antialiased;
-  font-size: 20px;
-  color: #bdbdd5;
-  
 }
 
-.content-width {
-  width: 86%;
-  height: 100vh;
+.siteTitle {
+  display: block;
+  font-weight: 900;
+  color: white;
+  font-size: 30px;
+  margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .siteTitle {
+    font-size: 60px;
+  }
+}
+
+header,
+main,
+footer {
+  max-width: 960px;
   margin: 0 auto;
 }
 
-.slideshow {
+
+.card {
+  height: 400px;
   position: relative;
-  width: 100%;
-  height: 75%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  border: 6px solid #2e424d;
+  margin-bottom: 20px;
+  background-image: url(./images/test.png);
+  background-size: cover;
+}
+.card:before{
+  background-color: var(--right-bg-color);
+}
+@media (min-width: 768px) {
+  .card {
+    height: 500px;
+  }
+}
+
+.inner {
+  height: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-sizing: border-box;
+  padding: 40px;
+}
+@media (min-width: 768px) {
+  .inner {
+    width: 50%;
+    height: 100%;
+  }
 }
 
-.slideshow-items {
+.title {
+  font-size: 24px;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  color: #181818;
+  text-shadow: 0px 2px 2px #a6f8d5;
   position: relative;
-  width: 100%;
-  height: 300px;
+  margin: 0 0 20px 0;
+}
+@media (min-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
 }
 
-.item {
-  position: absolute;
-  width: 100%;
-  height: auto;
+.subtitle {
+  color: #b0215e;
+  text-align: center;
 }
 
-.item-image-container {
+.card2 {
+background-image: url(./images/ve.jpeg);
+}
+
+.card3 {
+  background-image: url(./images/images.jpg);
+}
+
+
+
+.btn-draw, .velo-slider__hint > span {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  text-transform: uppercase;
+  
+}
+
+
+
+/** 
+ * Default to Border Box
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/**
+ * Links
+ */
+.btn1{
+margin-bottom: 20%;
+ margin-left: 30px; 
+}
+ a {
+  text-decoration: none;
+  background-color: transparent;
+  outline: 0;
+}
+.btn-draw {
+ 
+  display: inline-block; 
+  width: auto;
+  background: transparent;
+  border: 0;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-draw .btn-draw__text {
   position: relative;
-  width: 42%;
+  display: block;
+  padding: 0.7555em 2.29em;
+  line-height: 1.5;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  /* background-color: rgba(46, 66, 77, 1) ; */
+  
 }
 
-.item-image-container::before {
+
+.btn-draw .btn-draw__text:before, .btn-draw .btn-draw__text:after {
   content: '';
   position: absolute;
-  top: -1px;
+  height: 3px;
+  width: 0;
+  background-color: #00ffc8;
+  
+}
+.btn-draw .btn-draw__text:before {
+  top: 0;
   left: 0;
-  width: 101%;
-  height: 101%;
-  background: #272727;
-  opacity: 0;
-  z-index: 1;
+  -webkit-transition: width 0.15s 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: width 0.15s 0.45s cubic-bezier(0.77, 0, 0.175, 1);
 }
-
-.item-image {
-  position: relative;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  display: block;
-  /* transition: property name | duration | timing-function | delay  */
-  transition: opacity .3s ease-out .45s;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
-}
-
-.item.active .item-image {
-  opacity: .6;
-}
-
-/* .item.active .item-image-container::before {
-  opacity: .8;
-} */
-
-.item-description {
-  position: absolute;
-  top: 182px;
+.btn-draw .btn-draw__text:after {
+  bottom: 0;
   right: 0;
-  width: 50%;
-  padding-right: 4%;
-  line-height: 1.8;
+  -webkit-transition: width 0.15s 0.15s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: width 0.15s 0.15s cubic-bezier(0.77, 0, 0.175, 1);
+  
+  
 }
-
-/* Staggered Vertical Items ------------------------------------------------------*/
-.item-header {
+.btn-draw .btn-draw__text:hover  {
+  /* background-color: rgba(46, 66, 77, 1) ; */
+  background-color: #212121 ;
+  transition: ease-in-out 1s;
+}
+.btn-draw .btn-draw__text > span:before, .btn-draw .btn-draw__text > span:after {
+  content: '';
   position: absolute;
-  top: 150px;
-  left: -1.8%;
-  z-index: 100;
+  height: 0;
+  width: 3px;
+  background-color: #00ffc8;
+  -webkit-transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+  transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+.btn-draw .btn-draw__text > span:before {
+  left: 0;
+  bottom: 0;
+  -webkit-transition: height 0.15s 0 cubic-bezier(0.77, 0, 0.175, 1);
+  transition: height 0.15s 0 cubic-bezier(0.77, 0, 0.175, 1);
+}
+.btn-draw .btn-draw__text > span:after {
+  right: 0;
+  top: 0;
+  -webkit-transition: height 0.15s 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: height 0.15s 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+}
+@media (hover) {
+  .btn-draw:hover, a:hover .btn-draw {
+    cursor: pointer;
+    color: #00ffc8;
+  }
+  .btn-draw:hover:before, a:hover .btn-draw:before {
+    width: 0;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  /* .btn-draw:hover .btn-draw__text, a:hover .btn-draw .btn-draw__text {
+    -webkit-transform: translateX(-2.2em);
+            transform: translateX(-2.2em);
+    -webkit-transition: width 1s ease, -webkit-transform 0.5s ease;
+    transition: width 1s ease, -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease, width 1s ease;
+    transition: transform 0.5s ease, width 1s ease, -webkit-transform 0.5s ease;
+  } */
+  .btn-draw:hover .btn-draw__text:before, a:hover .btn-draw .btn-draw__text:before {
+    width: 100%;
+    max-width: 100%;
+    -webkit-transition: width 0.15s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: width 0.15s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  .btn-draw:hover .btn-draw__text:after, a:hover .btn-draw .btn-draw__text:after {
+    width: 100%;
+    -webkit-transition: width 0.15s 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: width 0.15s 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+    
+  }
+  .btn-draw:hover .btn-draw__text > span:before, a:hover .btn-draw .btn-draw__text > span:before {
+    left: 0;
+    height: 100%;
+    -webkit-transition: height 0.15s 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: height 0.15s 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  .btn-draw:hover .btn-draw__text > span:after, a:hover .btn-draw .btn-draw__text > span:after {
+    right: 0;
+    height: 100%;
+    -webkit-transition: height 0.15s 0.15s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: height 0.15s 0.15s cubic-bezier(0.77, 0, 0.175, 1);
+  }
 }
 
-.item-header .vertical-part {
-  margin: 0 -4px;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: auto;
-  font-size: 7vw;
+
+.btn-draw.btn--white {
   color: #fff;
 }
-
-.vertical-part {
-  margin-left: 120px;
-  overflow: hidden;
-  display: inline-block;
+.btn-draw.btn--white:before, .btn-draw.btn--white:after,
+.btn-draw.btn--white .btn-draw__text:before,
+.btn-draw.btn--white .btn-draw__text:after,
+.btn-draw.btn--white .btn-draw__text > span:before,
+.btn-draw.btn--white .btn-draw__text > span:after {
+  background-color: #fff;
 }
-
-.vertical-part b {
-  display: inline-block;
-  transform: translateY(100%);
+.btn-draw.btn--white:hover, a:hover .btn-draw.btn--white {
+  color: #fff;
 }
-
-.item-header .vertical-part b {
-  transition: .5s;
+@media (min-width:600px){
+  
+  .btn-draw__text{
+     font-size:1.5rem ;
+     top: 50%;
+  }
 }
-
-.item-description .vertical-part b {
-  transition: .21s;
-}
-
-.item.active .item-header .vertical-part b {
-  transform: translateY(0);
-}
-
-.item.active .item-description .vertical-part b {
-  transform: translateY(0);
-}
-
-/* Controls ----------------------------------------------------------------------*/
-.controls {
-  top: 150px;
-  position: relative;
-  text-align: right;
-  z-index: 1000;
-}
-
-.controls ul {
-  list-style: none;
-}
-
-.controls ul li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 3px;
-  background:#bdbdd5;;
-  cursor: pointer;
-}
-
-.controls ul li.active {
-  background:#6a6a77;;
+@media (max-width:779px){
+   
+    .btn-draw__text{
+       font-size:1.2rem ;
+       
+    }
 }

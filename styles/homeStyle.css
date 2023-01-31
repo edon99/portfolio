@@ -41,6 +41,7 @@ a {
   outline: 0;
 }
 
+
 .btn-draw {
   position: relative;
   display: inline-block;
@@ -307,6 +308,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   overflow: hidden;
+  margin-left: 0px;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -766,6 +768,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5em;
   }
 }
+@media (min-width: 54em){
+  .velo-slide__figure{
+    margin-left: 0px;
+  } 
+}
+
 
 @font-face {
   font-family: 'ssicons';

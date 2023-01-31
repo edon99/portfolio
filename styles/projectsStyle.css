@@ -376,12 +376,7 @@ background-color: var(--left-bg-color);
         background-color: transparent;
         outline: 0;
       }
-      *{
-        -webkit-transition:none !important ;
-        -moz-transform: none !important;
-        -o-transition: none  !important;
-        transition: none !important;
-      }
+     
       .hover-left .left{
         width: 100%;
     }

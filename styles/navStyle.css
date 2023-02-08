@@ -133,6 +133,12 @@ body.open .navbar-menu {
     background: transparent;
     flex-direction: row;
     visibility: visible;
+    
+  }
+}
+@media (max-width:480px){
+  .navbar a{
+    font-size: 24px;
   }
 }
 

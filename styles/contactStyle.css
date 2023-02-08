@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap');
 body {
     margin: 0;
-    padding: 0;
+    width: 100%;
     background-color: #212121;
     padding-bottom: 100px;
   }
@@ -44,7 +44,7 @@ body {
   
   .form-control, 
   textarea {
-    width: 400px;
+    width: 380px;
     padding: 12px;
     margin-bottom: 10px;
     background-color: #000;
@@ -60,7 +60,7 @@ body {
     border: none;
     margin-top: 15px;
     height: 38px;
-    width: 400px;
+    width: 380px;
     overflow: hidden;
     transition: all .2s ease-in-out;
     background-color: #2e424d;
@@ -92,6 +92,7 @@ body {
     /* background-color: #2e424d; */
     transform: translate3d(0px, -35px, 0px);
   }
+  
   
   /* Begin Right Contact Page */
   .direct-contact-container {
@@ -218,7 +219,7 @@ body {
     }  
     
     .direct-contact-container {
-      margin-top: 60px;
+      margin-top: 50px;
       max-width: 300px;
     }    
     .social-media-list li {
@@ -267,7 +268,15 @@ body {
       height: 55px;
       line-height: 55px;
     }
-    
+    .place {
+      margin-left: 37px;
+    }
+    .gmail {
+      margin-left: 23px;
+    }
+    .section-header {
+      font-size:48px;
+    }
   }
   
   @media screen and (max-width: 410px) {

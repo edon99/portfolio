@@ -31,7 +31,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     position: relative;
-    max-width: 100%;
+    max-width: 840px;
   }
   
   /* Left contact page */
@@ -44,7 +44,7 @@ body {
   
   .form-control, 
   textarea {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin-bottom: 10px;
     background-color: #000;
@@ -60,7 +60,7 @@ body {
     border: none;
     margin-top: 15px;
     height: 38px;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     transition: all .2s ease-in-out;
     background-color: #2e424d;
@@ -213,7 +213,16 @@ body {
     .contact-wrapper {
       display: flex;
       flex-direction: column;
+      width: 100%;
     }
+    .form-control, 
+  textarea {
+    width: 100%;
+  }
+  .send-button{
+    width: 100%;
+  }
+    
     .direct-contact-container, .form-horizontal {
       margin: 0 auto;
     }  
@@ -236,12 +245,15 @@ body {
   
   @media screen and (max-width: 480px) {
   
+    .contact-wrapper{
+      width: 100% ;
+    }
     .direct-contact-container, .form-wrapper {
       float: none;
       margin: 0 auto;
     }  
     .form-control, textarea {
-      
+      width: 100%;
       margin: 0 auto;
     }
    

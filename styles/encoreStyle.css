@@ -105,3 +105,10 @@ body{
       .btn-close:hover {
         transform: scale(1.15);
       }    
+      @media (max-width:480px){
+        .row {
+          flex-wrap:wrap-reverse ;
+          padding: 0 40px 30px;
+        
+        }
+     }

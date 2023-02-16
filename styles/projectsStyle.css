@@ -347,11 +347,11 @@ background-color: var(--left-bg-color);
       }
       h1{
         font-family: "Montserrat", Helvetica, sans-serif;
-        font-size: 3rem;
+        font-size: 2rem;
         color: #fff;
         position: absolute;
         left:50%;
-        top: 10%;
+        top: 15%;
         transform: translateX(-50%);
         white-space: nowrap;
         
@@ -387,5 +387,9 @@ background-color: var(--left-bg-color);
     }
     .hover-right .left{
         width: 100%;
+    }
+    .btn-draw .btn-draw__text{
+      padding: 0.7555em 1.4em;
+
     }
       }

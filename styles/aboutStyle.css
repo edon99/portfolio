@@ -978,5 +978,14 @@ margin-left: 0;
   .card__slide:nth-child(2).exit .image {
     transform: translate3d(-50%, 45%, 0);
   }
- 
+  .title__line:before{
+    width: calc(100% + 4rem);
+  }
+  .number{
+    display: none;
+  }
+  .card__slide:nth-child(even) .date {
+    right: 5.5%;
  }
+
+}

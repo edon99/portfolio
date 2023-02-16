@@ -68,7 +68,7 @@ img {
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
     will-change: transform;
-    transform: skew(.300rad);
+    transform: skew(.170rad);
    z-index: 999;
 } 
 
@@ -159,7 +159,7 @@ img {
 @media (max-width:480px){
      
      .box{
-        transform: skew(0.1rad);
+        transform:none ;
         z-index: 0;
      }
      .container{
@@ -169,6 +169,7 @@ img {
      .box{
         margin-left: 0;
      }
+    
     
     
   }

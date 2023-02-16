@@ -84,9 +84,6 @@
   opacity: .35;
 }
 
-/* .item.active .item-image-container::before {
-  opacity: .8;
-} */
 
 .item-description {
   position: absolute;
@@ -155,15 +152,15 @@
 
 .controls ul li {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   margin: 3px;
-  background:#bdbdd5;;
+  background:#6a6a77;
   cursor: pointer;
 }
 
 .controls ul li.active {
-  background:#6a6a77;;
+  background:#bdbdd5;
 }
 @media (max-width:480px) {
   .item-description {
@@ -217,5 +214,14 @@
   }
   .item.active .item-video {
     opacity: .35;
+  }
+  .controls {
+   
+    top: 50px;
+    text-align: center;
+  }
+  .controls ul li {
+     height: 25px;
+    width: 25px;
   }
 }

@@ -65,7 +65,9 @@
   transition: opacity .3s ease-out .45s;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
 }
-
+.item-video::-webkit-media-controls {
+  display: none !important;
+}
 .item-video{
   position: relative;
   width: 100%;

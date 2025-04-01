@@ -1,0 +1,39 @@
+{
+  "name": "portfoliov2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@primevue/themes": "^4.1.0",
+    "@sanity/client": "^6.28.4",
+    "@tailwindcss/vite": "^4.0.17",
+    "@tato30/vue-pdf": "^1.11.3",
+    "github-calendar": "^2.3.4",
+    "pdfvuer": "^2.0.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.1.0",
+    "tailwindcss": "^4.0.17",
+    "typewriter-vue": "^0.5.19",
+    "vue": "^3.5.10",
+    "vue-router": "^4.5.0",
+    "vue-typer": "^1.2.0",
+    "vue3-marquee": "^4.2.2"
+  },
+  "devDependencies": {
+    "@primevue/auto-import-resolver": "^4.1.0",
+    "@types/vue-router": "^2.0.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "unplugin-vue-components": "^0.27.4",
+    "vite": "^6.2.3"
+  }
+}

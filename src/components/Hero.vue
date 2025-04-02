@@ -118,7 +118,7 @@ const smoothScroll = (id) => {
           'shake bg-red-500/10 transition-all': isShaking,
           'fullscreen bg-green-500/10': isFullscreen,
           'dismiss bg-yellow-500/10 ': isDismissed
-         }"  class="w-full h-60 overflow-hidden rounded-xl bg-gray-900 shadow-2xl">
+         }"  class="w-full h-60 overflow-hidden rounded-xl bg-gray-900 shadow-2xl break-words whitespace-pre-wrap">
           <div class="flex bg-gray-800/40 ring-1 ring-white/5">
             <div class="mb-px flex text-sm/6 font-medium text-gray-400">
               <div class="bg-white/5 px-3 py-2 text-white flex flex-row gap-1">
@@ -145,7 +145,7 @@ const smoothScroll = (id) => {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em;
+  letter-spacing: .05em;
   animation: blink-caret .75s step-end infinite;
   min-height: 1.2em; 
 }

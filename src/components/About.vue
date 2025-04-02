@@ -2,9 +2,17 @@
 import LogoCarousel from './LogoCarousel.vue';
 import { Vue3Marquee } from 'vue3-marquee';
 
-function getAge(yearOfBirth) {
+function getAge(dateOfBirth) {
     const today = new Date();
-    return today.getFullYear() - yearOfBirth;
+    const birthDate = new Date(dateOfBirth);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    const dayDiff = today.getDate() - birthDate.getDate();
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+    }
+
+    return age;
 }
 
 
@@ -16,7 +24,7 @@ function getAge(yearOfBirth) {
     
       <h1 class="bg-white dark:bg-egray mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">About</span></h1>
       <p class=" max-w-full lg:max-w-3/4 font-bold text-gray-300 md:text-xl lg:text-xl">
-        {{getAge(2002)}} year old Full Stack Web Engineer with experience in developing SaaS applications, eCommerce platforms and dynamic web applications.
+        {{getAge("2002-03-04")}} year old Full Stack Web Engineer with experience in developing SaaS applications, eCommerce platforms and dynamic web applications.
          My journey started during my master's in university where i applied my skills through freelancing and school project.<br>
         I love learning about new technologies, especially from skilled people and professionals in the field, which makes me a great team player.<br>
 

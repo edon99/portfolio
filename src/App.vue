@@ -3,7 +3,7 @@ import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
 </script>
 <template>
-  <div id="app" class="bg-egray font-sans">
+  <div id="app" class="bg-egray font-display">
     <html class="dark">
     <NavBar/>
     <router-view/>

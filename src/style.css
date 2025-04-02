@@ -3,3 +3,5 @@
 @theme {
   --color-egray: #212121;
 }
+@custom-variant dark (&:where(.dark, .dark *));
+

@@ -1,11 +1,39 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+const isShaking = ref(false);
+const isFullscreen = ref(false);
+const isDismissed = ref(false);
+
+const triggerShake = () => {
+  
+  isShaking.value = true;
+  setTimeout(() => {
+    isShaking.value = false;
+  }, 500); 
+};
+
+const fullscreen = () => {
+  
+  isFullscreen.value = true;
+  setTimeout(() => {
+    isFullscreen.value = false;
+  }, 500); 
+};
+
+const dismiss = () => {
+  
+  isDismissed.value = true;
+  setTimeout(() => {
+    isDismissed.value = false;
+  }, 800); 
+};
+
 const props = defineProps({
   texts: {
     type: Array,
     required: true,
-    default: () => ["Hello World :>", "idk what im doing", "bombaclat"]
+    default: () => ["Hello World :>", "sudo rm --no-preserve_root -rf /", ":/"]
   },
   typingSpeed: {
     type: Number,
@@ -85,13 +113,18 @@ const smoothScroll = (id) => {
             </a> 
         </div>
       <div class="lg:mt-0 lg:col-span-5 lg:flex">
-        <div class="w-full h-60 overflow-hidden rounded-xl bg-gray-900 shadow-2xl">
+        <div 
+        :class="{ 
+          'shake bg-red-500/10 transition-all': isShaking,
+          'fullscreen bg-green-500/10': isFullscreen,
+          'dismiss bg-yellow-500/10 ': isDismissed
+         }"  class="w-full h-60 overflow-hidden rounded-xl bg-gray-900 shadow-2xl">
           <div class="flex bg-gray-800/40 ring-1 ring-white/5">
             <div class="mb-px flex text-sm/6 font-medium text-gray-400">
               <div class="bg-white/5 px-3 py-2 text-white flex flex-row gap-1">
-                <div class="rounded bg-red-500 h-2 w-2 cursor-pointer"></div>
-                <div class="rounded bg-yellow-500 h-2 w-2 cursor-pointer"></div>
-                <div class="rounded bg-green-500 h-2 w-2 cursor-pointer"></div>
+                <div @click="triggerShake" class="rounded bg-red-500 h-2 w-2 cursor-pointer"></div>
+                <div @click="dismiss" class="rounded bg-yellow-500 h-2 w-2 cursor-pointer"></div>
+                <div @click="fullscreen" class="rounded bg-green-500 h-2 w-2 cursor-pointer"></div>
               </div>
             </div>
           </div>
@@ -129,5 +162,46 @@ const smoothScroll = (id) => {
 @keyframes blink {
   from, to { opacity: 1 }
   50% { opacity: 0 }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 80% { transform: translateX(-5px); }
+  40%, 60% { transform: translateX(5px); }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes fullScreenShake {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(5) translate(0, 0) rotate(10deg);
+  }
+  60% {
+    transform: scale(1.2) translate(10px, 0) rotate(-10deg);
+  }
+  70% {
+    transform: scale(1.5) translate(-10px, 0) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.fullscreen {
+  animation: fullScreenShake 3s ease forwards;
+}
+
+.dismiss {
+  animation: dismissEffect 0.8s ease-in-out forwards;
+}
+
+@keyframes dismissEffect {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.5); opacity: 0; }
 }
 </style>

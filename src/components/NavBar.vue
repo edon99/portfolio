@@ -122,7 +122,7 @@ onUnmounted(() => {
         class="block h-16 mx-2 w-auto shadow-2xl text-white cursor-pointer hover:text-blue-600 transition-all ease-in-out transform hover:translate-y-1"
         :icon="['fab', 'github']"
     />
-    <div class="ml-7 mt-5 w-1 h-24 lg:h-64 bg-blue-700"></div>
+    <div class="ml-7 mt-5 w-1 h-24 lg:h-48 bg-blue-700"></div>
   </a>
 </div>
 

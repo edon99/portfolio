@@ -125,7 +125,7 @@ alt="Tailwind"
               <font-awesome-icon class="block h-6 mx-2 w-auto text-white" :icon="['fas', 'arrow-up-right-from-square']" />
             </a>
           </div>
-          <img v-if="index % 2 !== 0" class="w-full" :src="project.image" :alt="project.name">
+          <img v-if="index % 2 !== 0" class="w-full" :src="project.imageUrl" :alt="project.name">
         </div>
       </div>
     </transition>

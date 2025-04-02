@@ -4,7 +4,7 @@ import Projects from '../../components/Projects.vue';
 </script>
 
 <template>
-  <Projects class="py-32" projectType = 'mobile'/>
+  <Projects class="py-32" title="Mobile Projects" projectType = 'mobile'/>
 </template>
 
 <style>

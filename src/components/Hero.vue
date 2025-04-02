@@ -130,7 +130,7 @@ const smoothScroll = (id) => {
           </div>
           <div class="text-white px-6 pb-14 pt-6">
             <div class="typewriter">
-              <span>{{ displayedText || '&nbsp;' }}</span><span class="cursor">|</span>
+              <span>> {{ displayedText || '&nbsp;' }}</span><span class="cursor">|</span>
             </div>
           </div>
         </div>

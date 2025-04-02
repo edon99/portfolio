@@ -16,8 +16,8 @@ const props = defineProps({
           
         <div class="relative lg:row-span-2">
           <RouterLink to="/projects/dev">
-<div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem] max-lg:rounded-t-[2rem] hover:bg-gray-200 hover:shadow-lg transition-all duration-300" />
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] ">
+<div class="absolute  inset-px rounded-lg bg-white lg:rounded-l-[2rem] max-lg:rounded-t-[2rem] " />
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] hover:bg-blue-100 transition-all duration-300">
             <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
               <p class="mt-2 text-2xl font-bold tracking-tight text-gray-950 max-lg:text-center">Web Development</p>
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Experienced in building large-scale web applications, with expertise in both backend and frontend development.</p>
@@ -72,7 +72,7 @@ namespace</span> App\Http\Middleware;
         <div class="relative max-lg:row-start-2 lg:col-start-2 lg:row-start-1">
           <RouterLink to="/projects/mobile">
           <div class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[2rem]" />
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] hover:bg-blue-100 transition-all duration-300">
             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
               <p class="mt-2 text-2xl font-bold tracking-tight text-gray-950 max-lg:text-center">Mobile Development</p>
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">I have experience building Mobile apps, still continuously expanding my skills to deliver quality solutions.</p>
@@ -95,7 +95,7 @@ namespace</span> App\Http\Middleware;
         <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
         <RouterLink to="/projects/video-editing">
           <div class="absolute inset-px rounded-lg bg-white lg:rounded-br-[2rem] max-lg:rounded-b-[2rem]" />
-          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] hover:bg-blue-100 transition-all duration-300">
             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
               <p class="mt-2 text-2xl font-bold tracking-tight text-gray-950 max-lg:text-center">Video Editing</p>
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Efficient with Premiere Pro and making short form content videos with special effects.</p>

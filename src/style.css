@@ -5,3 +5,20 @@
 }
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: 'San Francisco';
+  src: url('/fonts/SF-Pro-Display-Regular.woff2') format('woff2'),
+       url('/fonts/SF-Pro-Display-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'San Francisco';
+  src: url('/fonts/SF-Pro-Display-Bold.woff2') format('woff2'),
+       url('/fonts/SF-Pro-Display-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { RouterLink } from "vue-router";
 
 const isMenuOpen = ref(false); 
@@ -18,6 +18,24 @@ const smoothScroll = (id) => {
     isMenuOpen.value = false; 
   }
 };
+
+const isHidden = ref(false);
+
+const handleScroll = () => {
+  const section = document.getElementById("contact");
+  if (!section) return;
+
+  const rect = section.getBoundingClientRect();
+  isHidden.value = rect.top <= window.innerHeight && rect.bottom >= 0;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
@@ -29,20 +47,19 @@ const smoothScroll = (id) => {
         </RouterLink>
       </div>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <a 
+          <!-- <a 
             href='../../public/cv.pdf'
-            target="_blank" 
             class="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            
+            download="ofoura_resume"
           >
             Resume
-          </a>
-           <!-- <RouterLink
+          </a> -->
+           <RouterLink
             to="/resume" 
             class="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Resume
-          </RouterLink> -->
+          </RouterLink>
         <button @click="toggleMenu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -83,7 +100,8 @@ const smoothScroll = (id) => {
       </div>
     </div>
   </nav>
-  <div class=" z-50 fixed right-4 bottom-2 flex flex-col gap-3">
+  <div   :class="{ 'opacity-0': isHidden, 'opacity-100': !isHidden }"
+   class="z-50 fixed right-4 bottom-2 flex flex-col gap-3 transition ease-out">
     <a href="https://www.linkedin.com/in/oussama-foura-1b2140211/" target="_blank">
     <font-awesome-icon
         size="3x"

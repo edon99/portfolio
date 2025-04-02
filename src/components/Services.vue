@@ -78,7 +78,7 @@ namespace</span> App\Http\Middleware;
               <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">I have experience building Mobile apps, still continuously expanding my skills to deliver quality solutions.</p>
             </div>
             <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-              <div class="absolute border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[500px] w-[300px] top-36 shadow-xl">
+              <div class="absolute border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[500px] w-[300px] top-38 shadow-xl">
                   <div class="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
                   <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
                   <div class="h-[46px] w-[3px] bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>

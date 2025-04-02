@@ -104,25 +104,25 @@ onUnmounted(() => {
    class="z-50 fixed right-4 bottom-2 flex flex-col gap-3 transition ease-out">
     <a href="https://www.linkedin.com/in/oussama-foura-1b2140211/" target="_blank">
     <font-awesome-icon
-        size="3x"
+        size="2x"
         class="block h-16 mx-2 w-auto shadow-2xl hover:shadow-2xl text-white cursor-pointer hover:text-blue-600 active:text-blue-600 transition-all ease-in-out transform hover:translate-y-1 active:translate-y-1"
         :icon="['fab', 'linkedin']"
     />
   </a>
     <a href="mailto:ofoura07@gmail.com">
     <font-awesome-icon
-        size="3x"
+        size="2x"
         class="block h-16 mx-2 w-auto shadow-2xl text-white cursor-pointer hover:text-blue-600 transition-all ease-in-out transform hover:translate-y-1"
         :icon="['fas', 'envelope']"
     />
   </a>
   <a href="https://github.com/edon99" target="_blank">
     <font-awesome-icon
-        size="3x"
+        size="2x"
         class="block h-16 mx-2 w-auto shadow-2xl text-white cursor-pointer hover:text-blue-600 transition-all ease-in-out transform hover:translate-y-1"
         :icon="['fab', 'github']"
     />
-    <div class="ml-7 mt-5 w-1 h-24 lg:h-48 bg-blue-700"></div>
+    <div class="ml-5 mt-5 w-1 h-24 lg:h-38 bg-blue-700"></div>
   </a>
 </div>
 

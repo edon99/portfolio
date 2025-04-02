@@ -16,11 +16,11 @@ const props = defineProps({
           
         <div class="relative lg:row-span-2">
           <RouterLink to="/projects/dev">
-          <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem] max-lg:rounded-t-[2rem]" />
+<div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem] max-lg:rounded-t-[2rem] hover:bg-gray-200 hover:shadow-lg transition-all duration-300" />
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] ">
             <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
-              <p class="mt-2 text-lg font-bold tracking-tight text-gray-950 max-lg:text-center">Web Development</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget sem sodales gravida.</p>
+              <p class="mt-2 text-2xl font-bold tracking-tight text-gray-950 max-lg:text-center">Web Development</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Experienced in building large-scale web applications, with expertise in both backend and frontend development.</p>
             </div>
             <div class="relative min-h-[30rem] w-full grow">
               <div class="absolute bottom-0 left-10 right-0 top-10 overflow-hidden rounded-tl-xl bg-gray-900 shadow-2xl">
@@ -65,7 +65,6 @@ namespace</span> App\Http\Middleware;
             </div>
           </div>
         
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
         </RouterLink>
         </div>
           
@@ -75,8 +74,8 @@ namespace</span> App\Http\Middleware;
           <div class="absolute inset-px rounded-lg bg-white lg:rounded-tr-[2rem]" />
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-              <p class="mt-2 text-lg font-bold tracking-tight text-gray-950 max-lg:text-center">Mobile Development</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit maiores impedit.</p>
+              <p class="mt-2 text-2xl font-bold tracking-tight text-gray-950 max-lg:text-center">Mobile Development</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">I have experience building Mobile apps, still continuously expanding my skills to deliver quality solutions.</p>
             </div>
             <div class="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
               <div class="absolute border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[500px] w-[300px] top-36 shadow-xl">
@@ -91,7 +90,6 @@ namespace</span> App\Http\Middleware;
               </div>
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
         </RouterLink>
         </div>
         <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
@@ -99,14 +97,17 @@ namespace</span> App\Http\Middleware;
           <div class="absolute inset-px rounded-lg bg-white lg:rounded-br-[2rem] max-lg:rounded-b-[2rem]" />
           <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
             <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-              <p class="mt-2 text-lg font-bold tracking-tight text-gray-950 max-lg:text-center">Video Editing</p>
-              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi.</p>
+              <p class="mt-2 text-2xl font-bold tracking-tight text-gray-950 max-lg:text-center">Video Editing</p>
+              <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Efficient with Premiere Pro and making short form content videos with special effects.</p>
             </div>
             <div class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-              <img class="absolute size-80 top-28 left-52 object-cover object-center" src="../assets/images/editing_ill.svg" alt="" />
+              <img 
+  class="hidden lg:block absolute size-80 top-28 left-52 object-cover object-center"
+  src="../assets/images/editing_ill.svg"
+  alt=""
+/>
             </div>
           </div>
-          <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5" ></div>
         </RouterLink>
         </div>
       </div>

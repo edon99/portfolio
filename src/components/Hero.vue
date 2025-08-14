@@ -103,7 +103,7 @@ const smoothScroll = (id) => {
       <div class="place-self-center lg:col-span-7 pb-12 lg:pb-0">
             <p class="max-w-2xl font-bold text-blue-500 md:text-lg lg:text-xl dark:text-gray-200">My name is</p>
             <h1 class="max-w-md mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white border-b-8 border-blue-700">Oussama Foura</h1>
-            <p class="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-300"><span class="text-white">Full stack web Engineer</span> with experience in building high performing web applications, SaaS Solutions, as well as smart systems using <span class="text-white">AI</span> and <span class="text-white">Machine learning</span>.</p>
+            <p class="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-300"><span class="text-white">Full Stack Web Developer</span> with experience in building high performing web applications, SaaS Solutions, as well as smart systems using <span class="text-white">AI</span> and <span class="text-white">Machine learning</span>.</p>
             <a @click.prevent="smoothScroll('projects')" class="inline-flex cursor-pointer items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                 My Projects
                 <font-awesome-icon  class="block h-16 mx-2 w-auto text-white" :icon="['fas', 'arrow-down']" />

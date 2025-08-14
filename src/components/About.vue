@@ -39,11 +39,19 @@ Beyond coding, I’m passionate about video editing, and creating cool visuals f
     </div>
 
       <ol class="relative border-s border-gray-200 dark:border-gray-700">     
-        <li class="mb-4 p-2 ms-6">
+          <li class="mb-4 p-2 ms-6">
               <span class="absolute p-2.5 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
                 <font-awesome-icon class="block h-16 mx-3 w-auto text-white" :icon="['fas', 'briefcase']" />
               </span>
               <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Fullstack Web Developer<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300 ms-3">Ongoing</span></h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January 2025</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">Algeorithme</p>
+          </li>      
+        <li class="mb-4 p-2 ms-6">
+              <span class="absolute p-2.5 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                <font-awesome-icon class="block h-16 mx-3 w-auto text-white" :icon="['fas', 'briefcase']" />
+              </span>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Fullstack Web Developer<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300 ms-3">Freelance</span></h3>
               <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">January 2024</time>
               <p class="text-base font-normal text-gray-500 dark:text-gray-400">Codev IT Consulting Algeria</p>
           </li>             

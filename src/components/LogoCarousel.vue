@@ -9,6 +9,8 @@
           <font-awesome-icon size="4x" class="h-14 mx-3 w-auto text-white" :icon="['fab', 'python']" />
           <font-awesome-icon size="4x" class="h-16 mx-3 w-auto text-white" :icon="['fab', 'vuejs']" />
           <font-awesome-icon size="4x" class="h-14 mx-3 w-auto text-white" :icon="['fab', 'react']" />
+            <font-awesome-icon size="4x" class="h-14 mx-3 w-auto text-white" :icon="['fab', 'node-js']" />
+           <img class="logo mx-3 h-16 w-auto" src="https://cdn.simpleicons.org/express/38B2AC" alt="ExpressJs">
           <font-awesome-icon size="4x" class="h-14 mx-3 w-auto text-white" :icon="['fab', 'flutter']" />
           <font-awesome-icon size="4x" class="h-14 mx-3 w-auto text-white" :icon="['fab', 'dart-lang']" />
           <font-awesome-icon size="4x" class="h-14 mx-3 w-auto text-white" :icon="['fab', 'java']" />

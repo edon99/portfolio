@@ -5,8 +5,16 @@
 <template>
    <section class="py-24 mb-20 " id="contact">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-      <h1 class="bg-white dark:bg-egray mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">Contact me</span></h1>
-      <h2 class="text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">You’ll be in good company</h2>
+<h1
+             
+              class="relative max-w-fit mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden"
+            >
+              Contact Me
+              <span
+                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim"
+                
+              ></span>
+            </h1>      <h2 class="text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">You’ll be in good company</h2>
       <p class="mb-6 text-center font-light text-gray-500 md:text-lg dark:text-gray-400">You can reach me through any of the options below.</p>
 
       

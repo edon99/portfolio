@@ -29,6 +29,7 @@ const dismiss = () => {
   }, 800); 
 };
 
+
 const props = defineProps({
   texts: {
     type: Array,
@@ -80,6 +81,23 @@ const typeWriter = () => {
 
 onMounted(() => {
   typeWriter();
+    const borders = document.querySelectorAll('.border-anim')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('w-full')
+        } else {
+          
+          entry.target.classList.remove('w-full')
+        }
+      })
+    },
+    { threshold: 0.5 }
+  )
+
+  borders.forEach((el) => observer.observe(el))
 });
 
 onUnmounted(() => {
@@ -102,7 +120,16 @@ const smoothScroll = (id) => {
     <div class="grid max-w-screen-xl px-4 pt-8 mx-auto lg:gap-8 xl:gap-0 lg:pt-16 lg:grid-cols-12">
       <div class="place-self-center lg:col-span-7 pb-12 lg:pb-0">
             <p class="max-w-2xl font-bold text-blue-500 md:text-lg lg:text-xl dark:text-gray-200">My name is</p>
-            <h1 class="max-w-md mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white border-b-8 border-blue-700">Oussama Foura</h1>
+            <h1
+             
+              class="relative max-w-md mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden"
+            >
+              Oussama Foura
+              <span
+                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim"
+                
+              ></span>
+            </h1>
             <p class="max-w-2xl mb-6 font-bold text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-300"><span class="text-white">Full Stack Web Developer</span> with experience in building high performing web applications, SaaS Solutions, as well as smart systems using <span class="text-white">AI</span> and <span class="text-white">Machine learning</span>.</p>
             <a @click.prevent="smoothScroll('projects')" class="inline-flex cursor-pointer items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
                 My Projects

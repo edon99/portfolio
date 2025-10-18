@@ -33,8 +33,15 @@ onMounted(fetchProjects);
 <template>
   <section class="py-24  mb-20 lg:mb-0 sm:mb-20" id="projects">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-    <h1 class="bg-white dark:bg-egray mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">{{ title }}</span></h1>
-  
+    <!-- <h1 class="bg-white dark:bg-egray mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">{{ title }}</span></h1> -->
+   <h1
+  class="relative max-w-fit mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-visible"
+>
+  <span class="relative z-10">Projects</span>
+  <span
+    class="absolute left-0 bottom-0 h-[8px] bg-blue-700 transition-all duration-700 ease-out w-0 border-anim z-0"
+  ></span>
+</h1>
     <div>
     <div v-for="(project, index) in visibleProjects" :key="project.id" :class="index % 2 === 0 ? 'left' : 'right'" class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
       <img v-if="index % 2 === 0" class="w-full max-w-xl mx-auto" :src="project.imageUrl" :alt="project.title">

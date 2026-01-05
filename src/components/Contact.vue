@@ -6,13 +6,11 @@
    <section class="py-24 mb-20 " id="contact">
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
 <h1
-             
-              class="relative max-w-fit mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden"
+              class="relative max-w-fit mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-visible"
             >
-              Contact Me
+              <span class="relative z-10">Contact Me</span>
               <span
-                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim"
-                
+                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim z-0"
               ></span>
             </h1>      <h2 class="text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">You’ll be in good company</h2>
       <p class="mb-6 text-center font-light text-gray-500 md:text-lg dark:text-gray-400">You can reach me through any of the options below.</p>

@@ -121,12 +121,11 @@ const smoothScroll = (id) => {
       <div class="place-self-center lg:col-span-7 pb-12 lg:pb-0">
             <p class="max-w-2xl font-bold text-blue-500 md:text-lg lg:text-xl dark:text-gray-200">My name is</p>
             <h1
-             
-              class="relative max-w-md mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden"
+              class="relative max-w-fit mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-visible"
             >
-              Oussama Foura
+              <span class="relative z-10">Oussama Foura</span>
               <span
-                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim"
+                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim z-0"
                 
               ></span>
             </h1>

@@ -23,13 +23,11 @@ function getAge(dateOfBirth) {
     <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     
      <h1
-             
-              class="relative max-w-fit mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-hidden"
+              class="relative max-w-fit mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white overflow-visible"
             >
-              About
+              <span class="relative z-10">About</span>
               <span
-                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim"
-                
+                class="absolute bottom-0 left-0 h-[8px] bg-blue-700 transition-all duration-700 w-0 border-anim z-0"
               ></span>
             </h1>
       <p class=" max-w-full lg:max-w-3/4 font-bold text-gray-300 md:text-xl lg:text-xl">

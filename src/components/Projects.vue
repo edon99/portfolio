@@ -1,6 +1,8 @@
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { sanityClient } from '../sanity/sanity';
+import { supabase } from '../lib/supabase';
+import DeviceFrame from './DeviceFrame.vue';
+import { iconUrl } from '../lib/stacks';
 import { ref, onMounted, computed } from 'vue';
 
 
@@ -13,12 +15,21 @@ const props = defineProps({
 
 const fetchProjects = async () => {
   try {
-    const query = props.projectType 
-    ? `*[_type == "project" && type == "${props.projectType}"] | order(_createdAt asc) {title, description, link, type, stack, "imageUrl": image.asset->url}`
-    : `*[_type == "project"] | order(_createdAt asc) {title, description, link, type, stack, "imageUrl": image.asset->url}`;
-    const data = await sanityClient.fetch(query);  
-    projects.value = data;
-  
+    let query = supabase
+      .from('projects')
+      .select('id, title, description, link, type, stack, image_url, device')
+      .order('sort_order', { ascending: true, nullsFirst: false })
+      .order('created_at', { ascending: true });
+
+    if (props.projectType) {
+      query = query.eq('type', props.projectType);
+    }
+
+    const { data, error } = await query;
+    if (error) throw error;
+
+    // Map DB column image_url -> imageUrl so the template stays unchanged.
+    projects.value = (data ?? []).map((p) => ({ ...p, imageUrl: p.image_url }));
   } catch (error) {
     console.error('Error fetching projects:', error);
   }
@@ -44,40 +55,22 @@ onMounted(fetchProjects);
 </h1>
     <div>
     <div v-for="(project, index) in visibleProjects" :key="project.id" :class="index % 2 === 0 ? 'left' : 'right'" class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-      <img v-if="index % 2 === 0" class="w-full max-w-xl mx-auto" :src="project.imageUrl" :alt="project.title">
+      <DeviceFrame v-if="index % 2 === 0" :src="project.imageUrl" :alt="project.title" :device="project.device" />
       <div class="mt-4 md:mt-0">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{ project.title }}</h2>
         <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">{{ project.description }}</p>
         <h1 class="text-2xl text-white font-bold">Stack used:</h1>
 
-        <div class="flex space-x-4 mt-2">
-  <template v-for="tech in project.stack" :key="tech">
-    <font-awesome-icon 
-      v-if="tech !== 'django' && tech !== 'tailwindcss' && tech !== 'livewire'" 
-      size="3x" 
-      class="h-14 w-auto text-white" 
-      :icon="['fab', tech]" 
-    />
-    <img 
-      v-else-if="tech === 'django'" 
-      class="logo h-12 mx-3 w-auto" 
-      src="https://cdn.simpleicons.org/django/092E20" 
-      alt="Django"
-    />
-    <img 
-      v-else-if="tech === 'tailwindcss'"
-      class="logo h-12 mx-3 w-auto" 
-      src="https://cdn.simpleicons.org/tailwindcss/38B2AC" 
-      alt="Tailwind"
-    />
-    <img 
-      v-else-if="tech === 'livewire'"
-      class="logo h-12 mx-3 w-auto" 
-      src="https://cdn.simpleicons.org/livewire/38B2AC" 
-      alt="Tailwind"
-    />
-  </template>
-</div>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <img
+            v-for="tech in project.stack"
+            :key="tech"
+            class="h-12 w-auto"
+            :src="iconUrl(tech)"
+            :alt="tech"
+            :title="tech"
+          />
+        </div>
 
         
         <a v-if="project.link" :href="project.link" target="_blank" class="mt-7 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-l px-5 py-2.5 text-center dark:focus:ring-primary-900">
@@ -86,45 +79,27 @@ onMounted(fetchProjects);
         </a>
       
       </div>
-      <img v-if="index % 2 !== 0" class="w-full" :src="project.imageUrl" :alt="project.title">
+      <DeviceFrame v-if="index % 2 !== 0" :src="project.imageUrl" :alt="project.title" :device="project.device" />
     </div>
     
     <transition name="expand">
       <div v-show="showAll">
         <div v-for="(project, index) in hiddenProjects" :key="project.id" :class="index % 2 === 0 ? 'left' : 'right'" class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-          <img v-if="index % 2 === 0" class="w-full max-w-xl mx-auto" :src="project.imageUrl" :alt="project.name">
+          <DeviceFrame v-if="index % 2 === 0" :src="project.imageUrl" :alt="project.title" :device="project.device" />
           <div class="mt-4 md:mt-0">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">{{ project.title }}</h2>
             <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">{{ project.description }}</p>
             <h1 class="text-2xl text-white font-bold">Stack used:</h1>
 
-<div class="flex space-x-4 mt-2">
-<template v-for="tech in project.stack" :key="tech">
-<font-awesome-icon 
-v-if="tech !== 'django' && tech !== 'tailwindcss' && tech !== 'livewire'" 
-size="3x" 
-class="h-14 w-auto text-white" 
-:icon="['fab', tech]" 
-/>
-<img 
-v-else-if="tech === 'django'" 
-class="logo h-12 mx-3 w-auto" 
-src="https://cdn.simpleicons.org/django/092E20" 
-alt="Django"
-/>
-<img 
-v-else-if="tech === 'tailwindcss'"
-class="logo h-12 mx-3 w-auto" 
-src="https://cdn.simpleicons.org/tailwindcss/38B2AC" 
-alt="Tailwind"
-/>
-<img 
-v-else-if="tech === 'livewire'"
-class="logo h-12 mx-3 w-auto" 
-src="https://cdn.simpleicons.org/livewire/38B2AC" 
-alt="Tailwind"
-/>
-</template>
+<div class="flex flex-wrap gap-4 mt-2">
+  <img
+    v-for="tech in project.stack"
+    :key="tech"
+    class="h-12 w-auto"
+    :src="iconUrl(tech)"
+    :alt="tech"
+    :title="tech"
+  />
 </div>
 
             <a v-if="project.link" :href="project.link" target="_blank" class="mt-8 bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 inline-flex items-center text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-l px-5 py-2.5 text-center dark:focus:ring-primary-900">
@@ -132,7 +107,7 @@ alt="Tailwind"
               <font-awesome-icon class="block h-6 mx-2 w-auto text-white" :icon="['fas', 'arrow-up-right-from-square']" />
             </a>
           </div>
-          <img v-if="index % 2 !== 0" class="w-full" :src="project.imageUrl" :alt="project.name">
+          <DeviceFrame v-if="index % 2 !== 0" :src="project.imageUrl" :alt="project.title" :device="project.device" />
         </div>
       </div>
     </transition>

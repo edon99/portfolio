@@ -1,0 +1,2 @@
+# SPA fallback so vue-router history-mode deep links (e.g. /admin) resolve to index.html
+/*  /index.html  200

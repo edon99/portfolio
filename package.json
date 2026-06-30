@@ -15,7 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@primevue/themes": "^4.1.0",
-    "@sanity/client": "^6.28.4",
+    "@supabase/supabase-js": "^2.110.0",
     "@tailwindcss/vite": "^4.0.17",
     "@tato30/vue-pdf": "^1.11.3",
     "github-calendar": "^2.3.4",

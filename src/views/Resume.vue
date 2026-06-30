@@ -1,12 +1,23 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import VuePdfEmbed from "vue-pdf-embed";
+import { supabase } from "../lib/supabase";
 
 const pdfWidth = ref("90vw");
 
-const pdfSource = 'cv.pdf'
+// Falls back to the bundled CV until one is uploaded from the dashboard.
+const pdfSource = ref('/cv.pdf');
 
 const loading = ref(true);
+
+const fetchResume = async () => {
+  const { data } = await supabase
+    .from('site_settings')
+    .select('resume_url')
+    .eq('id', 1)
+    .maybeSingle();
+  if (data?.resume_url) pdfSource.value = data.resume_url;
+};
 
 const updatePdfWidth = () => {
   const screenWidth = window.innerWidth;
@@ -25,7 +36,8 @@ const updatePdfWidth = () => {
 };
 
 onMounted(() => {
-  updatePdfWidth(); 
+  fetchResume();
+  updatePdfWidth();
   window.addEventListener("resize", updatePdfWidth);
 });
 
@@ -78,8 +90,8 @@ const handleRendering = () => {
       @rendered="handleRendering"
     />
    
-    <a 
-      href="/cv.pdf"
+    <a
+      :href="pdfSource"
       v-show="!loading"
       class="text-white cursor-pointer bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-12 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       download="ofoura_resume"

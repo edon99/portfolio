@@ -1,0 +1,108 @@
+[
+  {
+    "_createdAt": "2025-03-31T00:54:50Z",
+    "description": "Multi-tenant web platform that allows partner agencies to create client reservations using predefined contracts, departures, and pricing managed by Gonalez. The system centralizes data and streamlines the booking process across all collaborators.",
+    "imageUrl": "https://cdn.sanity.io/images/pgwopmzt/production/051b4e35a7b9103ec84549ab96b95fb36a0a0d3f-2829x2438.png",
+    "link": null,
+    "slug": {
+      "_type": "slug",
+      "current": "gonalez"
+    },
+    "stack": [
+      "laravel"
+    ],
+    "title": "Gonalez Trip",
+    "type": "web"
+  },
+  {
+    "_createdAt": "2025-03-31T19:24:09Z",
+    "description": "This B2C platform pulls data from Gonalez's dashboard, allowing end clients to browse and filter departures and tours while streamlining the booking process.",
+    "imageUrl": "https://cdn.sanity.io/images/pgwopmzt/production/ed9f54d24a067e86286211d4ea48069bd72379f0-2793x2326.png",
+    "link": "https://reserve.gonaleztravel.com/",
+    "slug": {
+      "_type": "slug",
+      "current": "gonalez-trip-b2c"
+    },
+    "stack": [
+      "laravel",
+      "livewire"
+    ],
+    "title": "Gonalez Trip (B2C)",
+    "type": "web"
+  },
+  {
+    "_createdAt": "2025-03-31T19:50:31Z",
+    "description": "Elmou3alim is an online educational platform designed to provide high-quality courses across various subjects. It aims to make learning more accessible with clear explanations, practical examples, and structured lessons to help students improve their understanding and achieve academic success.",
+    "imageUrl": "https://cdn.sanity.io/images/pgwopmzt/production/a5e06e792e5e74f4e5307d0363676e6f14c44b1f-2937x2130.png",
+    "link": "https://elmou3alim.com",
+    "slug": {
+      "_type": "slug",
+      "current": "elmou3alim"
+    },
+    "stack": [
+      "laravel"
+    ],
+    "title": "elMou3alim",
+    "type": "web"
+  },
+  {
+    "_createdAt": "2025-03-31T22:06:33Z",
+    "description": "This project connects tourists with authentic destinations in Algeria, where locals and guides recommend spots with beautiful views and scenes, delicious traditional and fast food places, and vibrant city shops.",
+    "imageUrl": "https://cdn.sanity.io/images/pgwopmzt/production/55b57c70b13038c5f85248c5cebe18f038fbca9e-2280x2114.png",
+    "link": null,
+    "slug": {
+      "_type": "slug",
+      "current": "tourism-dz"
+    },
+    "stack": [
+      "django"
+    ],
+    "title": "Tourism Dz",
+    "type": "web"
+  },
+  {
+    "_createdAt": "2025-03-31T22:13:19Z",
+    "description": "Glammour is an eCommerce website that sells Algerian Kaftans.",
+    "imageUrl": "https://cdn.sanity.io/images/pgwopmzt/production/3cf4fd4f77d8ec1ca2b0c0a62e07becce4c60365-2542x2066.png",
+    "link": "https://glammour.shop",
+    "slug": {
+      "_type": "slug",
+      "current": "glammour"
+    },
+    "stack": [
+      "laravel",
+      "vuejs"
+    ],
+    "title": "Glammour",
+    "type": "web"
+  },
+  {
+    "_createdAt": "2025-03-31T22:19:39Z",
+    "description": "This app was developed for a startup aiming to connect users in need with service providers in their area. It uses maps to identify and notify the closest providers whenever a search is in progress.",
+    "imageUrl": "https://cdn.sanity.io/images/pgwopmzt/production/eb336f904c57ae124fea92ad930e7ada5d533f48-2206x2647.png",
+    "link": null,
+    "slug": null,
+    "stack": [
+      "flutter",
+      "laravel"
+    ],
+    "title": "Kaffelny",
+    "type": "mobile"
+  },
+  {
+    "_createdAt": "2025-07-18T23:47:46Z",
+    "description": "sJaguar is an eCommerce website that specializes in women’s clothing and offers built-in inventory control and automated shipping integration.",
+    "imageUrl": "https://cdn.sanity.io/images/pgwopmzt/production/5bf0934c152e370f07ba9d1a8116ea9924197e55-1000x750.png",
+    "link": "https://s-jaguar.com/",
+    "slug": {
+      "_type": "slug",
+      "current": "sjaguar"
+    },
+    "stack": [
+      "laravel",
+      "livewire"
+    ],
+    "title": "sJaguar",
+    "type": "web"
+  }
+]

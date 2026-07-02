@@ -35,8 +35,9 @@ function getAge(dateOfBirth) {
          My journey started during my master's in university where i applied my skills through freelancing and school project.<br>
         I love learning about new technologies, especially from skilled people and professionals in the field, which makes me a great team player.<br>
 
-Beyond coding, I’m passionate about video editing, and creating cool visuals for different things.
- I also enjoy football, both playing and watching. And whenever I can, I like being out in nature, taking in the fresh air and good views.
+        On the side, i am skilled in whatever is related to visuals. Through my experience with OBS and Premiere Pro, i was the man behind the big screen for multiple events and live broadcasts where i was responsible for the visuals and live scene switching and animation of the event.
+
+ I also enjoy football, going to the gym, and being out in nature, taking in the fresh air and good views.
         
         </p>
       <div class="px-20 py-8 ">

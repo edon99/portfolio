@@ -1,22 +1,40 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { RouterLink } from "vue-router";
+import { RouterLink, useRouter, useRoute } from "vue-router";
 
-const isMenuOpen = ref(false); 
+const router = useRouter();
+const route = useRoute();
+
+const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
 
-const smoothScroll = (id) => {
+const scrollToId = (id) => {
   const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-    isMenuOpen.value = false; 
+  if (!element) return false;
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
+  return true;
+};
+
+const smoothScroll = async (id) => {
+  isMenuOpen.value = false;
+
+  // Sections live on the Home page. If we're elsewhere (/resume, /admin, ...),
+  // go Home first, then scroll once the section has rendered.
+  if (route.path !== "/") {
+    await router.push("/");
+    let tries = 0;
+    const tryScroll = () => {
+      if (scrollToId(id) || tries++ > 60) return;
+      requestAnimationFrame(tryScroll);
+    };
+    requestAnimationFrame(tryScroll);
+    return;
   }
+
+  scrollToId(id);
 };
 
 const isHidden = ref(false);
